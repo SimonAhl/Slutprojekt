@@ -10,10 +10,8 @@ public class Movement : MonoBehaviour
     float horizontal;
     float vertical;
 
-    //Hastigheten spelaren ska ha
     public float speed = 50;
 
-    //Spelarens rigidbody
     public Rigidbody2D playerrb;
 
     void Update()
@@ -31,6 +29,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("IsMoving", false);
     }
 
+    //Här använder jag FixedUpdate istället för Update då FixedUpdate ska användas för fysik och rigidbody beräkningar
     private void FixedUpdate()
     {
         //Om man håller in båda sammtidigt ska hastigheten inte bli sammanlagt mer än om man skulle endast hålla in en av dom

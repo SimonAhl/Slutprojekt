@@ -13,8 +13,9 @@
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
-# Testar att ta bort alla meta-files
+# Testar att ta bort alla meta-files förutom folders
 *.meta
+!*.*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*

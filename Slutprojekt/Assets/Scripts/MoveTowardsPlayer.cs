@@ -5,11 +5,14 @@ using UnityEngine;
 public class MoveTowardsPlayer : MonoBehaviour
 {
 
-    public Transform playerpos;
+    Transform playerpos;
     public SpriteRenderer spriteR;
     [SerializeField] float speed;
     void Update()
     {
+        //Gör playerpos vara lika med transformen av spelaren
+        playerpos = GameObject.Find("Player").transform;
+
         //Sätter objektets rotation till att kolla rakt på spelaren
         transform.LookAt(playerpos);
 

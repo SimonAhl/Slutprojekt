@@ -12,7 +12,11 @@ public class DestroyEnemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Enemy")){
             Destroy(other.gameObject);
-            Destroy(gameObject);
+
+            //Förstör endast detta objekt om den inte har taggen "Wave"
+            if(!gameObject.CompareTag("Wave")){
+                Destroy(gameObject);
+            }
 
             //Ökar variablen enemiesKilled med 1, den kontrollerar hur ofta fiender spawnas
             GameObject.Find("Master").GetComponent<SpawnEnemies>().enemiesKilled++;

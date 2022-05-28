@@ -10,7 +10,7 @@ public class CameraFollowPlayer : MonoBehaviour
     //Har den i LateUpdate så att kameran updateras efter pointern, annars skapar det stuttering i pointern
     void LateUpdate() {
 
-      transform.position = new Vector3(playerPos.position.x, playerPos.position.y, -10);
+      transform.position = new Vector3(playerPos.position.x, playerPos.position.y, -20);
 
     }
 }

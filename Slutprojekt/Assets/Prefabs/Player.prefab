@@ -237,5 +237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2425931106764564023, guid: 698c4c1e8b6391b49a326323f2a662d6, type: 3}
+  wave: {fileID: 1775081864872153798, guid: 5d33fc9302ccc924fae698347b99b78b, type: 3}
   Cooldown: 0
   Cooldown_time: 1
+  W_Cooldown: 0
+  W_Cooldown_Time: 7

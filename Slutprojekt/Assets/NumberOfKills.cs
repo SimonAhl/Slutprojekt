@@ -6,6 +6,4 @@ public class NumberOfKills : MonoBehaviour
 {
     public int kills = 0;
 
-    
-
 }

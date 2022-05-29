@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -39,6 +40,11 @@ public class PlayerHealth : MonoBehaviour
             healthbar.SetActive(true);
         }else{
             healthbar.SetActive(false);
+        }
+
+        //Om spelaren har 0 eller mindre än 0 liv är spelet över och spelaren skickas till dödsskärmen
+        if(playerHealth <= 0){
+            SceneManager.LoadScene("DeathScreen");
         }
     }
 }

@@ -6,16 +6,14 @@ using UnityEngine.UI;
 public class KillsLeft : MonoBehaviour
 {
 
-    public GameObject KillCounter;
-
     void Update()
     {
         
         //Nummret som visas är hur många kills man har kvar tills wave attacken låses upp
-        GetComponent<Text>().text = (20 - KillCounter.GetComponent<NumberOfKills>().kills).ToString();
+        GetComponent<Text>().text = (20 - NumberOfKills.kills).ToString();
         
 
-        if(KillCounter.GetComponent<NumberOfKills>().kills >= 20){
+        if(NumberOfKills.kills >= 20){
             Destroy(gameObject);
         }
     }

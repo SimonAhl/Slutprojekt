@@ -8,17 +8,30 @@ public class SpawnEnemies : MonoBehaviour
     public GameObject enemy;
     public float spawn = 0;
     public float spawnTime = 2;
+    public float initSpawn = 2;
+
+    public int logBase = 1;
 
     public float Q_chance = 5;
+    public float initQ_chance = 5;
     public int enemiesKilled = 0;
     void Update()
     {
-        //Sänk tiden som det tar för fiender att spawna med 25% varje 10 fiender som dör
+
         //Ökar chansen att en snabbare variant av den vanliga fienden spawnas
         if(enemiesKilled >= 10){
+
+
+            //Sänk tiden som det tar för fiender att spawna varje 10 fiender som dör
+            //Detta gör jag på ett logaritmiskt sätt för att enligt min erfarnhet brukar logaritmisk svårighet vara det mest intressanta och utmanande
+            logBase++;
+            spawnTime = initSpawn / Mathf.Log(logBase + 1, 1.1f);
+
+            //Ökar chansen för en snabb version av fienden att spawna, även logaritmiskt
+            Q_chance = initQ_chance * Mathf.Log(logBase + 1, 1.3f);
+
+            
             enemiesKilled = 0;
-            spawnTime = spawnTime * 0.75f;
-            Q_chance = Q_chance * 1.25f;
         }
 
         //Om spawntimern är mindre eller lika med noll spawnas en fiende på en random plats på spelplanen som inte är nära spelaren utan rotation

@@ -123,9 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba0dfa72188aa74383c94421a8cd5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2998104486953995247, guid: 052f1f1f3159fc140846bfedc51fda36, type: 3}
   spriteR: {fileID: 282237039064829439}
-  speed: 2
+  speed: 2.5
 --- !u!114 &282237039064829436
 MonoBehaviour:
   m_ObjectHideFlags: 0

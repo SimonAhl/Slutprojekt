@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class NumberOfKills : MonoBehaviour
 {
-    public int kills = 0;
+    static public int kills;
+
+    void Start(){
+        kills = 0;
+    }
 
 }

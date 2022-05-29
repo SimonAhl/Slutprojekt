@@ -26,9 +26,9 @@ public class DestroyEnemy : MonoBehaviour
 
             Counter = GameObject.Find("KillCounter");
 
-            Counter.GetComponent<NumberOfKills>().kills++;
+            NumberOfKills.kills++;
 
-            Counter.GetComponent<Text>().text = Counter.GetComponent<NumberOfKills>().kills.ToString();
+            Counter.GetComponent<Text>().text = NumberOfKills.kills.ToString();
         }
     }
 }

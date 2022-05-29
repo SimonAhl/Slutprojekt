@@ -9,8 +9,6 @@ public class ShootBullet : MonoBehaviour
 
     public GameObject wave;
 
-    public GameObject KillCounter;
-
     //Cooldown timer och time för vanliga attacken
     public float Cooldown;
     public float Cooldown_time;
@@ -30,7 +28,7 @@ public class ShootBullet : MonoBehaviour
 
 
         //Man kan endast använda wave attacken om man har mer än 20 kills
-        if(KillCounter.GetComponent<NumberOfKills>().kills >= 20){
+        if(NumberOfKills.kills >= 20){
 
             //Samma sak som ovan fast med wave attacken och med högerclick iställer för vänsterclick
             if(Input.GetKeyDown(KeyCode.Mouse1) && W_Cooldown <= 0){

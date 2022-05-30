@@ -6,18 +6,26 @@ using UnityEngine.SceneManagement;
 public class Retry : MonoBehaviour
 {
 
-    float init_time;
+    float clickWait;
 
     private void Start() {
-        init_time = Time.time;
+
+        clickWait = 1.5f;
+
+    }
+
+    private void Update() {
+        if(clickWait > 0)
+           clickWait -= Time.deltaTime;
     }
 
 
 
     public void RetryOnClick(){
 
-        //Väntar 3 sekunder innan man kan klicka så att man inte klickar av misstag
-        if(init_time > Time.time + 3)
-        SceneManager.LoadScene("GameScreen");
+        //Väntar 1.5 sekunder innan man kan klicka så att man inte klickar av misstag
+        if(clickWait <= 0){
+            SceneManager.LoadScene("GameScreen");
+        }
     }
 }

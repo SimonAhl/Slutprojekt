@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class ToTutorial : MonoBehaviour
 {
     public void TutorialOnClick(){
-        SceneManager.LoadScene("TutorialScene");
+        SceneManager.LoadScene("TutorialScreen");
     }
 }
